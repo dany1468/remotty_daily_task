@@ -7,8 +7,8 @@ require 'thor'
 require './daily_task_coach'
 
 class Command < Thor
-  desc "notify_all_tasks", "notify all today's tasks"
-  def notify_all_tasks
+  desc "remaind_tasks", "notify all today's tasks"
+  def remaind_tasks
     DailyTaskCoach.new.notify_remaining_tasks
   end
 
