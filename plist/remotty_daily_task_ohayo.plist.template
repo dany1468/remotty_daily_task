@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>remotty_trello_starter</string>
+    <string>remotty_trello_ohayo</string>
     <key>ProgramArguments</key>
     <array>
         <string><%= home_dir %>/.rbenv/shims/bundle</string>
