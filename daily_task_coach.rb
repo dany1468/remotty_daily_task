@@ -32,7 +32,9 @@ class DailyTaskCoach
   def fetch_all_task_with_done_label
     fetch_all_cards.map {|card|
       task = "#{card.name}"
-      done?(card) ? "[done] #{task}" : task
+      label_icon = done?(card) ? ':ballot_box_with_check:' : ':white_medium_small_square:'
+
+      "#{label_icon} #{task}"
     }
   end
 
