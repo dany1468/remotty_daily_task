@@ -8,7 +8,7 @@ class DailyTaskCoach
   end
 
   def notify_remaining_tasks
-    notify! ['【今日の残りタスクはこれだけだ、がんばろう :v:】', fetch_active_tasks]
+    notify! ['【今日の残りタスクはこれだけだ、がんばろう :v:】', fetch_active_tasks_with_label]
   end
 
   def encourage_reviewing_tasks
@@ -25,8 +25,14 @@ class DailyTaskCoach
     notifier.post_message! messages.join("\n")
   end
   
-  def fetch_active_tasks
-    fetch_all_cards.reject {|card| done?(card) }.map(&:name)
+  def fetch_active_tasks_with_label
+    fetch_all_cards.reject {|card| done?(card) }.map {|card|
+      if label_names = labels(card)
+        "#{label_names.map {|label| "[#{label}]" }.join('')} #{card.name}"
+      else
+        card.name
+      end
+    }
   end
 
   def fetch_all_task_with_done_label
@@ -36,6 +42,10 @@ class DailyTaskCoach
 
       "#{label_icon} #{task}"
     }
+  end
+
+  def labels(card)
+    card.card_labels.map {|label| label['name'] }
   end
 
   def fetch_all_cards
