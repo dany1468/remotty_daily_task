@@ -4,7 +4,7 @@ require './remotty'
 
 class DailyTaskCoach
   def encourage_organizing_tasks
-    notify! ['【今日のタスクを整理しよう :exclamation: 昨日の残件はこれだけだ。】', fetch_active_tasks]
+    notify! ['【今日のタスクを整理しよう :exclamation: 昨日の残件はこれだけだ。】', fetch_active_tasks_with_label]
   end
 
   def notify_remaining_tasks

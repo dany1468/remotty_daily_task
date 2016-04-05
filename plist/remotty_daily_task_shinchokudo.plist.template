@@ -10,7 +10,7 @@
         <string>exec</string>
         <string>ruby</string>
         <string>command.rb</string>
-        <string>remaind_tasks</string>
+        <string>remained_tasks</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
