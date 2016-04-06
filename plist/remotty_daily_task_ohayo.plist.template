@@ -15,9 +15,9 @@
     <key>RunAtLoad</key>
     <true/>
     <key>StandardOutPath</key>
-    <string><%= working_dir %>/remotty_daily_task.log</string>
+    <string><%= working_dir %>/log/remotty_daily_task.log</string>
     <key>StandardErrorPath</key>
-    <string><%= working_dir %>/remotty_daily_task-1.log</string>
+    <string><%= working_dir %>/log/remotty_daily_task-1.log</string>
     <key>UserName</key>
     <string><%= user_name %></string>
     <key>WorkingDirectory</key>
