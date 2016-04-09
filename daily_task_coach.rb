@@ -1,5 +1,4 @@
 require 'trello'
-require 'active_support/all'
 require './remotty'
 
 class DailyTaskCoach

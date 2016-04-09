@@ -56,7 +56,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport
   dotenv
   pry-byebug
   ruby-trello
